@@ -8,7 +8,7 @@ class NewsPage extends StatefulWidget {
 }
 
 class _NewsPageState extends State<NewsPage> {
-  int Newsint = 1;
+  int newInst = 1;
   String viewName = 'NewsList';
 
   @override
@@ -54,7 +54,7 @@ class _NewsPageState extends State<NewsPage> {
               onTap: () {
                 Navigator.of(context).pop();
                 setState(() {
-                  Newsint = 1;
+                  newInst = 1;
                   viewName = 'NewsList';
                 });
               },
@@ -68,7 +68,7 @@ class _NewsPageState extends State<NewsPage> {
               onTap: () {
                 Navigator.of(context).pop();
                 setState(() {
-                  Newsint = 2;
+                  newInst = 2;
                   viewName = 'NewsList';
                 });
               },
@@ -82,7 +82,7 @@ class _NewsPageState extends State<NewsPage> {
               onTap: () {
                 Navigator.of(context).pop();
                 setState(() {
-                  Newsint = 3;
+                  newInst = 3;
                   viewName = 'NewsList';
                 });
               },
@@ -96,7 +96,7 @@ class _NewsPageState extends State<NewsPage> {
               onTap: () {
                 Navigator.of(context).pop();
                 setState(() {
-                  Newsint = 4;
+                  newInst = 4;
                   viewName = 'NewsList';
                 });
               },
@@ -110,7 +110,7 @@ class _NewsPageState extends State<NewsPage> {
               onTap: () {
                 Navigator.of(context).pop();
                 setState(() {
-                  Newsint = 5;
+                  newInst = 5;
                   viewName = 'NewsList';
                 });
               },
@@ -128,7 +128,7 @@ class _NewsPageState extends State<NewsPage> {
           right: 10,
           left: 10,
         ),
-        child: BuildView(viewName: viewName, intNews: Newsint),
+        child: BuildView(viewName: viewName, intNews: newInst),
       ),
     );
   }

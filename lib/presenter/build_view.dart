@@ -16,13 +16,13 @@ class BuildView extends StatelessWidget {
           child: Center(
             child: Container(
               child: FutureBuilder(
-                future: ApiService().GetDio(optionUrl: intNews),
+                future: ApiService().getDio(optionUrl: intNews),
                 builder: (context, retornado) {
                   if (retornado.hasData) {
                     return ListView.builder(
                       itemCount: (retornado.data).articlesList.length,
                       itemBuilder: (BuildContext context, int index) {
-                        return buildItemList(
+                        return BuildItemList(
                             retornadoData:
                                 (retornado.data).articlesList[index]);
                       },

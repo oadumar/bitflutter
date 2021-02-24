@@ -11,7 +11,7 @@ class NewsPage extends StatefulWidget {
 }
 
 class _NewsPageState extends State<NewsPage> {
-  int Newsint = 1;
+  int newsInt = 1;
   String viewName = 'NewsList';
 
   @override
@@ -57,7 +57,7 @@ class _NewsPageState extends State<NewsPage> {
               onTap: () {
                 Navigator.of(context).pop();
                 setState(() {
-                  Newsint = 1;
+                  newsInt = 1;
                   viewName = 'NewsList';
                 });
               },
@@ -65,7 +65,7 @@ class _NewsPageState extends State<NewsPage> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   ' > All articles mentioning Apple from yesterday, sorted by popular publishers first.',
-                  style: EstTex.draOpt,
+                  style: EstTex.draOptM,
                 ),
               ),
             ),
@@ -73,7 +73,7 @@ class _NewsPageState extends State<NewsPage> {
               onTap: () {
                 Navigator.of(context).pop();
                 setState(() {
-                  Newsint = 2;
+                  newsInt = 2;
                   viewName = 'NewsList';
                 });
               },
@@ -81,7 +81,7 @@ class _NewsPageState extends State<NewsPage> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   ' > All articles about Tesla from the last month, sorted by recent first.',
-                  style: EstTex.draOpt,
+                  style: EstTex.draOptM,
                 ),
               ),
             ),
@@ -89,7 +89,7 @@ class _NewsPageState extends State<NewsPage> {
               onTap: () {
                 Navigator.of(context).pop();
                 setState(() {
-                  Newsint = 3;
+                  newsInt = 3;
                   viewName = 'NewsList';
                 });
               },
@@ -97,7 +97,7 @@ class _NewsPageState extends State<NewsPage> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   ' > Top business headlines in the US right now.',
-                  style: EstTex.draOpt,
+                  style: EstTex.draOptM,
                 ),
               ),
             ),
@@ -105,7 +105,7 @@ class _NewsPageState extends State<NewsPage> {
               onTap: () {
                 Navigator.pop(context);
                 setState(() {
-                  Newsint = 4;
+                  newsInt = 4;
                   viewName = 'NewsList';
                 });
               },
@@ -113,7 +113,7 @@ class _NewsPageState extends State<NewsPage> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   ' > Top headlines from TechCrunch right now.',
-                  style: EstTex.draOpt,
+                  style: EstTex.draOptM,
                 ),
               ),
             ),
@@ -121,7 +121,7 @@ class _NewsPageState extends State<NewsPage> {
               onTap: () {
                 Navigator.of(context).pop();
                 setState(() {
-                  Newsint = 5;
+                  newsInt = 5;
                   viewName = 'NewsList';
                 });
               },
@@ -129,7 +129,7 @@ class _NewsPageState extends State<NewsPage> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   ' > All articles published by the Wall Street Journal in the last 6 months, sorted by recent first.',
-                  style: EstTex.draOpt,
+                  style: EstTex.draOptM,
                 ),
               ),
             ),
@@ -141,7 +141,7 @@ class _NewsPageState extends State<NewsPage> {
           right: 10,
           left: 10,
         ),
-        child: BuildView(viewName: viewName, intNews: Newsint),
+        child: BuildView(viewName: viewName, intNews: newsInt),
       ),
     );
   }

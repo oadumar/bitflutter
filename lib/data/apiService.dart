@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class ApiService {
-  String UrlForApi(optionUrl) {
+  String urlForApi(optionUrl) {
     switch (optionUrl) {
       case 1: //  About Apple
         return 'https://newsapi.org/v2/everything?q=apple&from=2021-02-21&to=2021-02-21&sortBy=popularity&apiKey=64c32a49e1df4baa8f23a70a562e3c0c';
@@ -18,10 +18,10 @@ class ApiService {
     }
   }
 
-  GetDio({@required int optionUrl}) async {
+  getDio({@required int optionUrl}) async {
     var dio = Dio();
 
-    Response response = await dio.get(UrlForApi(optionUrl));
+    Response response = await dio.get(urlForApi(optionUrl));
 
     if (response.statusCode == 200) {
       return NewsApiModel.fromjson(response.data);
